@@ -1,6 +1,9 @@
 <html>
 <head>
   <!-- Link the style sheet here -->
+   {% load static %}
+   <link rel="stylesheet" href="/static/style.css" />
+   <link rel="stylesheet" href="/static/bootstrap.min.css" />
 </head>
 <div>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
@@ -27,36 +30,37 @@
   
     <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
       <div class="banner" name="about-header">
-      <!-- Insert header information here -->
+          <h1>About Us</h1>
+          <p>Welcome to Best Cars dealership, home to the best cars in North America. We deal in selling domestic and imported cars at reasonable prices.</p>
       </div>
       <div style="display: flex;flex-direction: row; margin:auto">
       <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+        <img class="card-img-top" src="/static/person_1.png" alt="Card image">
         <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
+          <p class="title">Mark Steel</p>
+          <p>CEO</p>
+          <p class="card-text">Mark Steel, CEO of car dealership</p>
+          <p>marksteel@example.com</p>
         </div>
       </div>
 
       <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+        <img class="card-img-top" src="/static/person_2.png" alt="Card image">
         <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
+          <p class="title">Andrew Crescent</p>
+          <p>Marketing/Sales Executive</p>
+          <p class="card-text">Andrew Crescent, Marketing executive of Car dealership</p>
+          <p>andrewcrescent@example.com</p>
         </div>
       </div>
 
       <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
+        <img class="card-img-top" src="/static/person_3.png" alt="Card image">
         <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
+          <p class="title">Victoria Stretton</p>
+          <p>Brand Ambassador</p>
+          <p class="card-text">Victoria Stretton, Brand Ambassador for Car dealership</p>
+          <p>victoriastretton@example.com</p>
         </div>
       </div>
     </div>
