@@ -31,8 +31,10 @@ const Dealer = () => {
 		if (retobj.status === 200) {
 			let dealerobjs = Array.from(retobj.dealer);
 			setDealer(dealerobjs[0]);
+			console.log('dealer', dealer);
 		}
 	};
+	console.log(dealer);
 
 	const get_reviews = async () => {
 		const res = await fetch(reviews_url, {
@@ -74,7 +76,7 @@ const Dealer = () => {
 				</a>,
 			);
 		}
-	}, [get_dealer, get_reviews, post_review]);
+	}, []);
 
 	return (
 		<div style={{ margin: '20px' }}>

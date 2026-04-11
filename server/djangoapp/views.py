@@ -78,11 +78,10 @@ def registration(request):
 # # Update the `get_dealerships` view to render the index page with
 # a list of dealerships
 def get_dealerships(request, state="All"):
-    endpoint = ''
     if state == 'All':
         endpoint = "/fetchDealers"
     else:
-        endpoint = "/fetchDealers/" + state
+        endpoint = "/fetchDealer/state/" + state
     
     dealership = get_request(endpoint)
     return JsonResponse({"status": 200, "dealers": dealership})
@@ -94,10 +93,11 @@ def get_dealer_reviews(request, dealer_id):
     if(dealer_id):
         endpoint = "/fetchReviews/dealer/"+str(dealer_id)
         reviews = get_request(endpoint)
-        for review_detail in reviews:
-            response = analyze_review_sentiments(review_detail['review'])
-            print(response)
-            review_detail['sentiment'] = response['sentiment']
+        if reviews:
+            for review_detail in reviews:
+                response = analyze_review_sentiments(review_detail['review'])
+                if response:
+                    review_detail['sentiment'] = response['sentiment']
         return JsonResponse({"status":200,"reviews":reviews})
     else:
         return JsonResponse({"status":400,"message":"Bad Request"})
