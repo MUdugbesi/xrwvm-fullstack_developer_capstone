@@ -1,0 +1,13 @@
+[flake8]
+# Ignore folders
+exclude =
+    .git,
+    __pycache__,
+    venv,
+    .venv,
+    node_modules,
+    build,
+    dist,
+    *migrations*
+# Max line length (Django default is often 79, but many prefer 88 or 120)
+max-line-length = 88

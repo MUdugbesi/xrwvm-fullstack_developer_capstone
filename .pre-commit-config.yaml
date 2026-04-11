@@ -1,0 +1,22 @@
+exclude: '^(server/database/node_modules/|server/frontend/src/|venv/|node_modules/)'
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  # Python Linting (Django)
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+        args: ["--max-line-length=88", "--exclude=migrations"]
+
+  # JavaScript Linting
+  - repo: https://github.com/pre-commit/mirrors-jshint
+    rev: v2.13.6
+    hooks:
+      - id: jshint
