@@ -3,3 +3,6 @@ Django
 Pillow
 gunicorn
 python-dotenv
+# Linting & Quality
+flake8==7.0.0
+pre-commit==3.6.0
