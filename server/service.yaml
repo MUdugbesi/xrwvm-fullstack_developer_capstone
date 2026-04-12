@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  run: dealership-service
+spec:
+  selector:
+    run: dealership
+  ports:
+  - port: 8000
+    targetPort: 30002
