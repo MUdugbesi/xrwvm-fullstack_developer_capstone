@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: dealership
-        image: docker.io/sparkleking/dealership:1.1
+        image: docker.io/sparkleking/dealership:1.2
         imagePullPolicy: Always
         resources:
           limits:
